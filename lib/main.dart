@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 // Import pages
 import 'package:mock_app/Screens/scr_account.dart';
+import 'package:mock_app/Screens/scr_battle.dart';
 import 'package:mock_app/Screens/scr_home.dart';
 
 void main() {
@@ -14,16 +15,12 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        // Define your theme properties here
-        primaryColor: Colors.blue,
-        // Other theme properties...
-      ),
       title: 'My AI App',
-      initialRoute: '/',
+      initialRoute: '/battle',
       routes: {
         '/': (context) => const Scr_Home(),
         '/account': (context) => const Scr_Account(),
+        '/battle': (context) => const Scr_Battle()
       },
     );
   }

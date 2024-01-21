@@ -12,25 +12,40 @@ class Scr_Home extends StatelessWidget {
     return MaterialApp(
         theme: ThemeData(
           // Define your theme properties here
-          primaryColor: Colors.blue,
+          colorScheme: const ColorScheme.light(),
         ),
         home: Scaffold(
-            appBar: AppBar(title: const Text('My AI App')),
+            appBar: AppBar(
+              title: const Text('Image Generator'),
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
+            ),
             body: const Column(
               children: [
-                Text('Welcome!'),
-                Text('You are fucking good!'),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text(""),
+                ),
+                Text('Welcome!',
+                    textAlign: TextAlign.center,
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                Text(
+                  "Let's create some fantastic image!",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
               ],
             ),
             floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const Scr_Account(),
-                  ),
-                );
-              },
-              child: const Icon(Icons.moving_outlined),
-            )));
+                backgroundColor: Colors.blue,
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const Scr_Account(),
+                    ),
+                  );
+                },
+                child: const Icon(Icons.account_box_outlined, size: 40))));
   }
 }

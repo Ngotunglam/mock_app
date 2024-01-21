@@ -28,6 +28,8 @@ class AccountScreen_build extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Account'),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -45,7 +47,7 @@ class AccountScreen_build extends StatelessWidget {
             Consumer<Cl_AccountPageState>(
                 builder: (context, clinstance, child) {
               return Text(
-                clinstance.current.asCamelCase,
+                clinstance.current.asPascalCase,
                 style: const TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
